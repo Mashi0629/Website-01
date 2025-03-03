@@ -5,13 +5,23 @@
     font-family: "poppins" , sans-serif;
 }
 
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min min-height: 100vh;
+    background: url('background.jpg') no-repeat;
+    background-size: cover;
+    
+
+}
+
 header{
     position: fixed;
     top: 0;
     left: 0;
     width:100% ;
-    padding: 20px 100px;
-    background: red;
+    padding: 20px 100px ;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,12 +47,21 @@ header{
 .navigation a::after{
     content: "";
     position: absolute;
+    left: 0;
+    bottom: -6px;
     width: 100%;
     height:3px ;
     background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
 
+}
 
-
+.navigation a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
 }
 
 .navigation .btnLogin-popup {
